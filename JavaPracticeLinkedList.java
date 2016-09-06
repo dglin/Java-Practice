@@ -5,6 +5,7 @@ public class JavaPracticeLinkedList {
 		testFrontOfList();
 		testEndOfList();
 		testReverseLinkedList();
+		testDeleteFromList();
 	}
 
 	/******************************************************
@@ -26,6 +27,9 @@ public class JavaPracticeLinkedList {
 		public int getNum() {
 			return num;
 		}
+		public void setNum(int num) {
+			this.num = num;
+		}
 	}
 
 	private static class LinkedList {
@@ -38,6 +42,11 @@ public class JavaPracticeLinkedList {
             tempNode = this.head;
             this.head = new ListNode(num);
             this.head.setNext(tempNode);
+		}
+		// Deletes the list node given given only knowing the target.
+		public void deleteListNode(ListNode target) {
+			target.setNum(target.getNext().getNum());
+			target.setNext(target.getNext().getNext());
 		}
 		public void addToEndOfList(int num) {
 			ListNode ptr = this.head;
@@ -66,6 +75,9 @@ public class JavaPracticeLinkedList {
             	ptr = ptr.getNext();
 			}
 			System.out.println(ptr.getNum());
+		}
+		public ListNode getHead() {
+			return this.head;
 		}
 	}
 	/******************************************************
@@ -107,7 +119,21 @@ public class JavaPracticeLinkedList {
         testList.reverse();
         System.out.println("Should print 1 - 5 in descending order: ");
         testList.printList();
+	}
 
+	private static void testDeleteFromList() {
+		LinkedList testList = new LinkedList(1);
+        testList.addToFrontOfList(2);
+        testList.addToFrontOfList(3);
+        testList.addToFrontOfList(4);
+        testList.addToFrontOfList(5);
+        testList.addToFrontOfList(6);
+        testList.addToFrontOfList(7);
+        System.out.println("Should print 1 - 7 in descending order: ");
+        testList.printList();
+        testList.deleteListNode(testList.getHead().getNext().getNext().getNext());
+        System.out.println("Should print 1 - 7 in descending order this time without the 4: ");
+        testList.printList();
 	}
 
 }
