@@ -8,6 +8,8 @@ public class JavaPracticeOperations {
 	public static void main (String[] args) {
 		itHashMap(testHashMap());
 		itHashMapForEach(testHashMap());
+		String notSorted = "zyxwvutsrqponmlkjihgfedcba";
+		System.out.println("Can you sort a string with .sort()? " + notSorted.sort().equals("abcdefghijklmnopqrstuvwxyz"));
 	}
 
 	/******************************************************
