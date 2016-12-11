@@ -9,7 +9,7 @@ public class JavaPracticeOperations {
 		itHashMap(testHashMap());
 		itHashMapForEach(testHashMap());
 		String notSorted = "zyxwvutsrqponmlkjihgfedcba";
-		System.out.println("Can you sort a string with .sort()? " + notSorted.sort().equals("abcdefghijklmnopqrstuvwxyz"));
+		// System.out.println("Can you sort a string with .sort()? " + notSorted.sort().equals("abcdefghijklmnopqrstuvwxyz"));
 	}
 
 	/******************************************************

@@ -15,7 +15,6 @@ public class JavaPracticeSpringManipulation {
 		System.out.println("Are these two permutations? \"dddddddd\" , \"ddddddd\": " + permutations("dddddddd","ddddddd"));
 		System.out.println("Are these two permutations? \"applepie\" , \"pieapple\": " + permutations("applepie","pieapple"));
 		System.out.println("Are these two permutations? \"abcdefg\" , \"abcaefg\": " + permutations("abcdefg","abcaefg"));
-
 	}
 
 	//1.1
